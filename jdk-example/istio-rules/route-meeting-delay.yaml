@@ -1,7 +1,7 @@
 apiVersion: config.istio.io/v1alpha2
 kind: RouteRule
 metadata:
-  name: meeting-server-503
+  name: meeting-server-delay
 spec:
   destination:
     name: meeting-server

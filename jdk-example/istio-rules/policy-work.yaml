@@ -5,12 +5,12 @@ metadata:
 spec:
   destination:
     name: work-server
-  precedence: 1
   loadBalancing:
     name: LEAST_CONN
   circuitBreaker:
     simpleCb:
-      maxConnections: 100
-      httpMaxRequests: 1000
+      maxConnections: 1
+      httpMaxRequests: 1
       httpConsecutiveErrors: 5
+      httpDetectionInterval: 10s
       sleepWindow: 30s

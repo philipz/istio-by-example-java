@@ -8,5 +8,5 @@ spec:
   precedence: 10
   httpFault:
     abort:
-      percent: 50
+      percent: 100
       httpStatus: 503
