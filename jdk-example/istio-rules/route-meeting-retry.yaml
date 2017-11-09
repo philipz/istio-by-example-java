@@ -6,9 +6,6 @@ spec:
   destination:
     name: meeting-server
   precedence: 10
-  route:
-  - labels:
-      version: "1.0"
   httpReqRetries:
     simpleRetry:
       perTryTimeout: 2s
