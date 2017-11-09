@@ -46,6 +46,7 @@ public class WorkServer {
       long end = System.currentTimeMillis();
 
       String response = "Worked for " + (end - start) + "ms, attended " + meetings + " meetings at " + hostName + "\n";
+      respondAndClose(exchange, response);
 
     });
 
@@ -59,5 +60,15 @@ public class WorkServer {
 
     os.write(bytes);
     os.close();
+  }
+
+  public static class HeaderEntry {
+    final String name;
+    final String value;
+
+    public HeaderEntry(String name, String value) {
+      this.name = name;
+      this.value = value;
+    }
   }
 }
